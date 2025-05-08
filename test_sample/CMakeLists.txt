@@ -2,22 +2,22 @@
 cmake_minimum_required(VERSION 3.20)
 
 # 프로젝트 정의
-project(test_server LANGUAGES CXX)
+project(test_sample LANGUAGES CXX)
 
 # 실행파일 정의
-add_executable(test_server)
+add_executable(test_sample)
 
 # 실행파일에 포함될 파일들은 아래와 같다( add_executable에서 바로 추가하는 방법도 있음 )
-target_sources(test_server
+target_sources(test_sample
     PRIVATE
         main.cpp
 )
 
 # common 의존성 추가
-target_link_libraries(test_server PRIVATE common)
+target_link_libraries(test_sample PRIVATE common)
 
 # 상대경로 일일이 안태우도록 설정
-target_include_directories(test_server PRIVATE 
+target_include_directories(test_sample PRIVATE 
     ${CMAKE_CURRENT_SOURCE_DIR}/../common
 )
 

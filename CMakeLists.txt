@@ -1,14 +1,11 @@
+# Cmake 버전 명시
 cmake_minimum_required(VERSION 3.20)
 
-# 프로젝트 이름 설정
-project(eins_net VERSION 1.0 LANGUAGES CXX)
+# 프로젝트 정의
+project(eins_net LANGUAGES CXX)
 
-# C++20 표준 설정
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
-
-# 서브 디렉토리 추가
+# 하위 디렉토리의 cmake를 프로젝트에 포함
 add_subdirectory(common)
 add_subdirectory(test_server)
 add_subdirectory(test_client)
+add_subdirectory(test_sample)
